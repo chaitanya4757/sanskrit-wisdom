@@ -3,10 +3,11 @@
 A live, multilingual chatbot that answers everyday life questions — anxiety, duty, decisions, grief, purpose — by retrieving and reasoning over verses from the Bhagavad Gita, using a Retrieval-Augmented Generation (RAG) pipeline.
 
 **Live app:** https://sanskrit-wisdom.onrender.com/
+
 **Repo:** https://github.com/chaitanya4757/sanskrit-wisdom
 ---
 
-## Problem Statement (as I understood it)
+## Problem Statement
 
 Build a system that helps people navigate everyday life problems — decisions, anxiety, grief, purpose, duty — by drawing on wisdom from ancient Sanskrit literature, and package it as a working, shareable product rather than a proof-of-concept. The brief was given verbally and intentionally open-ended, so part of this assignment was making the scoping decisions myself: which text(s) to source, how to structure and retrieve from them meaningfully (rather than just keyword-matching or hardcoding responses), which languages to support, and how to get it into someone else's hands as a live product, not just code on a laptop. The technical approach below — and the tradeoffs I made along the way — reflect those decisions and the reasoning behind them.
 

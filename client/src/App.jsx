@@ -11,7 +11,7 @@ function App() {
           fontWeight: 600,
           letterSpacing: '0.5px'
         }}>
-          🕉️ Gita Guidance
+          Gita Guidance
         </h1>
         <p style={{ margin: '4px 0 0', color: '#A89478', fontSize: '0.9em' }}>
           Life wisdom from the Bhagavad Gita

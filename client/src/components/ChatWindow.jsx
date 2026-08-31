@@ -92,7 +92,7 @@ function ChatWindow() {
       }}>
         {messages.length === 0 && (
           <p style={{ color: '#8A7B63', textAlign: 'center', marginTop: '60px', lineHeight: 1.6 }}>
-            🕉️ Ask a question about life, and receive guidance<br />from the Bhagavad Gita.
+            Ask a question about life, and receive guidance<br />from the Bhagavad Gita.
           </p>
         )}
         {messages.map((m, i) => (

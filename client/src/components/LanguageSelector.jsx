@@ -15,6 +15,8 @@ function LanguageSelector({ language, onChange }) {
     >
       <option value="en">English</option>
       <option value="hi">हिंदी</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
     </select>
   );
 }

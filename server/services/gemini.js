@@ -2,7 +2,8 @@ require('dotenv').config();
 const { GoogleGenAI } = require('@google/genai');
 
 const EMBEDDING_MODEL = 'gemini-embedding-001';
-const GENERATION_MODEL = 'gemini-3.6-flash';
+const GENERATION_MODEL = 'gemini-3.5-flash-lite';
+//const GENERATION_MODEL = 'gemini-3.6-flash';
 //const GENERATION_MODEL = 'gemini-2.5-flash'; // fast + cheap, good fit for this use case
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });

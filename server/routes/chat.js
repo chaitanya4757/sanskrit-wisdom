@@ -17,7 +17,8 @@ router.post('/chat', async (req, res) => {
       return res.status(400).json({ error: 'A non-empty "message" field is required.' });
     }
 
-    const safeLanguage = language === 'hi' ? 'hi' : 'en';
+    const SUPPORTED_LANGUAGES = ['en', 'hi', 'es', 'de'];
+    const safeLanguage = SUPPORTED_LANGUAGES.includes(language) ? language : 'en';
     const safeHistory = Array.isArray(history) ? history : [];
 
     // 1. Embed the user's question
@@ -25,6 +26,7 @@ router.post('/chat', async (req, res) => {
 
     // 2. Retrieve the most relevant verses
     const verses = search(queryVector, TOP_K);
+    console.log('DEBUG top scores:', verses.map(v => `${v.chapter}.${v.verse}: ${v.similarityScore.toFixed(3)}`));
 
     // 3. Build the grounded prompt
     const prompt = buildPrompt({

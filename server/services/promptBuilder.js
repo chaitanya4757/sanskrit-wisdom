@@ -2,7 +2,9 @@ const LOW_CONFIDENCE_THRESHOLD = 0.55; // tune this after real testing
 
 const LANGUAGE_NAMES = {
   en: 'English',
-  hi: 'Hindi'
+  hi: 'Hindi',
+  es: 'Spanish',
+  de: 'German'
 };
 
 function formatVerse(verse, language) {

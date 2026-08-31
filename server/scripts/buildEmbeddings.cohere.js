@@ -9,7 +9,11 @@ const OUTPUT_PATH = path.resolve(__dirname, '../data/embeddings.json');
 const BATCH_SIZE = 90;
 
 function buildEmbeddingText(verse) {
-  return [verse.translation_en, verse.transliteration].filter(Boolean).join('\n');
+  const themesLine = verse.theme_tags && verse.theme_tags.length > 0
+    ? `Themes: ${verse.theme_tags.join(', ')}`
+    : null;
+
+  return [verse.translation_en, verse.transliteration, themesLine].filter(Boolean).join('\n');
 }
 
 function chunk(array, size) {
